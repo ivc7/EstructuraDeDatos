@@ -10,6 +10,7 @@ public:
 	// Constructor copia:
   Lista(const Lista<T> &l);
 	Lista() :head(NULL) {}
+	void push_order(const T& d);
 	void push_front(const T& d);
 	void print()const;
 	void push_back(const T& d);
@@ -18,6 +19,7 @@ public:
 
 };
 
+/*Copy*/
 template<class  T>
 Lista<T>::Lista(const Lista<T> &l){
 //std::cout<<"wiii";
@@ -31,6 +33,31 @@ Lista<T>::Lista(const Lista<T> &l){
 		origen = origen->next;
 	}
 }
+
+/*push_order*/
+template<class T>
+void Lista<T>::push_order(const T& d){
+std::cout<<d<<"/n";
+
+	if (head == NULL)
+		head = new Node(d);
+	else
+	{
+		Node *ptrTmp = head;
+		while (ptrTmp->next != NULL){
+		  std::cout<<d<<'\n';
+			if(ptrTmp->dato<=d &&  ptrTmp->next->dato>=d){
+				Node* sig=ptrTmp->next;
+				ptrTmp->next=new Node(d,sig);
+				return;
+			}
+			ptrTmp = ptrTmp->next;
+		}
+
+		ptrTmp->next = new Node(d);
+	}
+}
+
 
 template<class T>
 void Lista<T>::push_front(const T& d) {
