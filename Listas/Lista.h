@@ -7,14 +7,31 @@ class Lista{
 private:
 #include "Node.h"
 public:
+	// Constructor copia:
+  Lista(const Lista<T> &l);
 	Lista() :head(NULL) {}
 	void push_front(const T& d);
 	void print()const;
 	void push_back(const T& d);
-private:
+public:
 	Node* head;
 
 };
+
+template<class  T>
+Lista<T>::Lista(const Lista<T> &l){
+//std::cout<<"wiii";
+//l.print();
+
+	Node* origen = l.head;
+	Node* destino = NULL;
+	while (origen != NULL) {
+		//std::cout << origen->dato << " ";
+		destino=new Node(origen	->dato,destino);
+		origen = origen->next;
+	}
+}
+
 template<class T>
 void Lista<T>::push_front(const T& d) {
 	head = new Node(d,head);
@@ -44,7 +61,7 @@ void Lista<T>::push_back(const T& d){
 }
 
 /*
- 1)adicionar los demás métodos Lista
+ 1)adicionar los demï¿½s mï¿½todos Lista
  (recursivamente).
  2) Implementar una lista que inserte los elementos
  ordenadamente
@@ -54,11 +71,3 @@ void Lista<T>::push_back(const T& d){
 
 
 */
-
-
-
-
-
-
-
-

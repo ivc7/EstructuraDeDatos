@@ -1,9 +1,10 @@
 #include<string>
 #include"Lista.h"
-void func(Lista<int> a) { a.push_back(100); }
+void func(Lista<int> &a) { Lista<int> b(a); b.push_back(100);b.print();
+std::cout << "\n"; }
 int main()
 {
-	
+
 	Lista<int> li;
 	li.push_front(1);
 	li.push_front(3);
@@ -26,5 +27,3 @@ int main()
 
     return 0;
 }
-
-
