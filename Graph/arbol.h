@@ -70,5 +70,5 @@ myfile << actual->dato << "->" << actual->der->dato<<";"<<"\n";
   }
   myfile << "}\n";
   myfile.close();
-
+system("dot -Tpdf /Users/ivan/Desarrollo/ED/Graph/example.dot -o /Users/ivan/Desarrollo/ED/Graph/example.pdf");
 }

@@ -13,8 +13,8 @@ int main(){
   abc.printForLevel();
 
   ArbolBS<int> abi;
-  for(size_t i=0;i<30;i++){
-    abi.Add(rand()%100);
+  for(size_t i=0;i<3000;i++){
+    abi.Add(rand()%3000);
   }
   abi.printForLevel();
 
