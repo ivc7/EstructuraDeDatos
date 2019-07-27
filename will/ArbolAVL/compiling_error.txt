@@ -1,0 +1,4 @@
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/prueba.cpp:1:10: fatal error: 'stdio' file not found
+#include <stdio>
+         ^~~~~~~
+1 error generated.

@@ -1,0 +1,12 @@
+digraph G{
+ node [shape=box, color=blue]
+n->i;
+i->h;
+h->a;
+i->l;
+l->k;
+l->m;
+n->p;
+p->o;
+p->q;
+}

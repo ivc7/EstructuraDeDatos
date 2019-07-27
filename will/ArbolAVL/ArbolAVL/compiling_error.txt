@@ -1,0 +1,74 @@
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:5:2: error: must use 'struct' tag to refer to type 'AVL'
+        AVL *izq, *der;
+        ^
+        struct 
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:6:2: error: unknown type name 'bool'
+        bool borrado;
+        ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:9:14: error: must use 'struct' tag to refer to type 'AVL'
+void rotarLL(AVL* &A){ //precond: el árbol necesita una rotacion LL
+             ^
+             struct 
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:7:3: note: struct 'AVL' is hidden by a non-type declaration of 'AVL' here
+} AVL;
+  ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:9:19: error: expected ')'
+void rotarLL(AVL* &A){ //precond: el árbol necesita una rotacion LL
+                  ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:9:13: note: to match this '('
+void rotarLL(AVL* &A){ //precond: el árbol necesita una rotacion LL
+            ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:9:19: error: parameter name omitted
+void rotarLL(AVL* &A){ //precond: el árbol necesita una rotacion LL
+                  ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:10:7: error: use of undeclared identifier 'aux'
+        AVL* aux = A->izq->der;
+             ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:10:13: error: use of undeclared identifier 'A'
+        AVL* aux = A->izq->der;
+                   ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:11:2: error: use of undeclared identifier 'A'
+        A->izq->der = A;
+        ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:11:16: error: use of undeclared identifier 'A'
+        A->izq->der = A;
+                      ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:12:2: error: use of undeclared identifier 'A'
+        A->izq->FB = 0;
+        ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:13:7: error: use of undeclared identifier 'aux2'
+        AVL* aux2 = A->izq;
+             ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:13:14: error: use of undeclared identifier 'A'
+        AVL* aux2 = A->izq;
+                    ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:14:2: error: use of undeclared identifier 'A'
+        A->izq = aux;
+        ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:14:11: error: use of undeclared identifier 'aux'
+        A->izq = aux;
+                 ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:15:2: error: use of undeclared identifier 'A'
+        A->FB = 0;
+        ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:16:2: error: use of undeclared identifier 'A'
+        A = aux2;
+        ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:16:6: error: use of undeclared identifier 'aux2'
+        A = aux2;
+            ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:19:14: error: must use 'struct' tag to refer to type 'AVL'
+void rotarRR(AVL* &A){ //precond: el árbol necesita una rotacion RR
+             ^
+             struct 
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:7:3: note: struct 'AVL' is hidden by a non-type declaration of 'AVL' here
+} AVL;
+  ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:19:19: error: expected ')'
+void rotarRR(AVL* &A){ //precond: el árbol necesita una rotacion RR
+                  ^
+/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/prueba.c:19:13: note: to match this '('
+void rotarRR(AVL* &A){ //precond: el árbol necesita una rotacion RR
+            ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
