@@ -1,6 +1,7 @@
 #include <cstddef>
 #include <stack>
 #include <iostream>
+#include <fstream>
 template <class T>
 struct NodoAVL{
 	T dato;
@@ -36,7 +37,7 @@ public:
 
 	//red-Black
 	//wearcaya@hotmail.com
-	//asunto: maestría......
+	//asunto: maestrï¿½a......
 };
 
 template<class T>
@@ -155,7 +156,7 @@ void AVL<T>::add(T d, NodoAVL<T>* & p){
 				crecioAltura = false;
 				break;
 			case NodoAVL<T>::DER_PESADO:
-				RDI(p);//ojo 
+				RDI(p);//ojo
 				crecioAltura = false;
 				break;
 			}
@@ -165,18 +166,30 @@ void AVL<T>::add(T d, NodoAVL<T>* & p){
 
 template<class T>
 void AVL<T>::print(NodoAVL<T>* r){
+	std::ofstream myfile;
+	myfile.open ("/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/example.dot");
+	myfile << "digraph G{\n node [shape=box, color=blue]\n";
+
 	std::stack<NodoAVL<T>*> s;
 	NodoAVL<T>* actual = r;
 	while (!s.empty() || actual) {
 		if (actual) {
+			if(actual->izq){
+				myfile << actual->dato << "->" << actual->izq->dato<<";"<<"\n";
+		  }
 			s.push(actual);
 			actual = actual->izq;
 		}
 		else {
 			actual = s.top();
 			s.pop();
+			if(actual->der) {
+			  myfile << actual->dato << "->" << actual->der->dato<<";"<<"\n";
+			}
 			std::cout << actual->dato << " ";
 			actual = actual->der;
 		}
 	}
+	myfile << "}\n";
+	myfile.close();
 }
