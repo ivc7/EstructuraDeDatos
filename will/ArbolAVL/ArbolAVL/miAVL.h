@@ -168,7 +168,7 @@ template<class T>
 void AVL<T>::print(NodoAVL<T>* r){
 	std::ofstream myfile;
 	myfile.open ("/Users/ivan/Desarrollo/ED/will/ArbolAVL/ArbolAVL/example.dot");
-	myfile << "digraph G{\n node [shape=box, color=blue]\n";
+	myfile << "digraph G{\n node [shape=circle, color=blue]\n";
 
 	std::stack<NodoAVL<T>*> s;
 	NodoAVL<T>* actual = r;

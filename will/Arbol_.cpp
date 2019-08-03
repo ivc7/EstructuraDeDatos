@@ -18,4 +18,3 @@ int main()
 	abc.toGraphViz();
     return 0;
 }
-

@@ -1,12 +1,8 @@
 digraph G{
- node [shape=box, color=blue]
-n->i;
-i->h;
-h->a;
-i->l;
-l->k;
-l->m;
-n->p;
-p->o;
-p->q;
+ node [shape=circle, color=blue]
+19->17;
+17->10;
+19->24;
+24->22;
+24->26;
 }
